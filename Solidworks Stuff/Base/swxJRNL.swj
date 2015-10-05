@@ -1,0 +1,37 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 12/03/14 by masilva
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = _
+Application.SldWorks
+
+Set Part = swApp.OpenDoc6("C:\Users\masilva\Dropbox\Project\Solidworks Stuff\Base\Base_Bottom.SLDPRT", 1, 0, "", longstatus, longwarnings)
+' MSGBOX
+'  C:\Users\masilva\Dropbox\Project\Solidworks Stuff\Base\Base_Bottom.SLDPRT is being used by Masilva.  Do you want to open a copy?
+
+swApp.ActivateDoc2 "Base_Bottom", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ExitApp
+End Sub
